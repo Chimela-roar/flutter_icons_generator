@@ -1,0 +1,7 @@
+builders:
+  iconBuilder:
+    import: "package:flutter_icons_generator/builder.dart"
+    builder_factories: ["iconBuilder"]
+    build_extensions: { "$package$": ["test"] }
+    auto_apply: root_package
+    build_to: source
