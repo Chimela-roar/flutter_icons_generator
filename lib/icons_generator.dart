@@ -34,13 +34,16 @@ class IconsGenerator implements Builder {
           fontName: pack.fontName,
         );
 
-        final fontFilePath = '${iconsModel.outputFontFolder}/${pack.fontFileName}';
+        final fontFilePath =
+            '${iconsModel.outputFontFolder}/${pack.fontFileName}';
 
-        final fontByteData = OTFWriter().write(svgToOtfResult.font).buffer.asUint8List();
+        final fontByteData =
+            OTFWriter().write(svgToOtfResult.font).buffer.asUint8List();
         final newFontAsset = AssetId(buildStep.inputId.package, fontFilePath);
         await buildStep.writeAsBytes(newFontAsset, fontByteData);
 
-        final classFilePath = '${iconsModel.outputFileFolderPath}/${pack.classFileName}';
+        final classFilePath =
+            '${iconsModel.outputFileFolderPath}/${pack.classFileName}';
 
         final generatedClass = _generateFontClass(
           glyphList: svgToOtfResult.glyphList,
@@ -65,7 +68,8 @@ class IconsGenerator implements Builder {
 
     for (final svg in svgDirectory) {
       if (svg is File) {
-        svgMap[svg.path.split('/').last.split('.svg').first] = svg.readAsStringSync();
+        svgMap[svg.path.split('/').last.split('.svg').first] =
+            svg.readAsStringSync();
       }
     }
     return svgMap;

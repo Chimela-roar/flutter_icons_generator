@@ -54,7 +54,8 @@ class FontClassGenerator {
         String variableNameWithCount;
 
         do {
-          variableNameWithCount = '${variableWithoutCount}_${++variableNameCount}';
+          variableNameWithCount =
+              '${variableWithoutCount}_${++variableNameCount}';
         } while (iconNameSet.contains(variableNameWithCount));
 
         variableName = variableNameWithCount;
@@ -68,9 +69,11 @@ class FontClassGenerator {
 
   bool get _hasPackage => _package != null;
 
-  String get _fontFamilyConst => "\tstatic const _iconFontFamily = '$_familyName';\n";
+  String get _fontFamilyConst =>
+      "\tstatic const _iconFontFamily = '$_familyName';\n";
 
-  String get _fontPackageConst => "\tstatic const _iconFontPackage = '$_package';\n";
+  String get _fontPackageConst =>
+      "\tstatic const _iconFontPackage = '$_package';\n";
 
   List<String> _generateIconConst(int index) {
     final glyphMeta = glyphList[index].metadata;
@@ -80,11 +83,16 @@ class FontClassGenerator {
     final varName = _iconVarNames[index].camelCase;
     final hexCode = charCode.toRadixString(16);
 
-    final posParamList = ['fontFamily: _iconFontFamily', if (_hasPackage) 'fontPackage: _iconFontPackage'];
+    final posParamList = [
+      'fontFamily: _iconFontFamily',
+      if (_hasPackage) 'fontPackage: _iconFontPackage'
+    ];
 
     final posParamString = posParamList.join(', ');
 
-    return ['\tstatic const IconData $varName = IconData(0x$hexCode, $posParamString);'];
+    return [
+      '\tstatic const IconData $varName = IconData(0x$hexCode, $posParamString);'
+    ];
   }
 
   String generate() {
@@ -95,7 +103,8 @@ class FontClassGenerator {
       for (var i = 0; i < glyphList.length; i++) ..._generateIconConst(i),
     ];
 
-    final classContentString = classContent.map((e) => e.isEmpty ? '' : '$_indent$e').join('\n');
+    final classContentString =
+        classContent.map((e) => e.isEmpty ? '' : '$_indent$e').join('\n');
 
     return '''
 import 'package:flutter/widgets.dart';
