@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer' as developer;
 import 'dart:io';
 
 import 'package:build/build.dart';
@@ -53,7 +54,7 @@ class IconsGenerator implements Builder {
       }
       return null;
     } catch (e) {
-      print(e);
+      developer.log(e.toString());
     }
   }
 

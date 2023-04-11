@@ -42,7 +42,7 @@ packages:
     source: hosted
     version: "2.1.1"
   build:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: build
       sha256: "3fbda25365741f8251b39f3917fb3c8e286a96fd068a5a242e11c2012d495777"
