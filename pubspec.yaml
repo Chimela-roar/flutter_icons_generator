@@ -1,6 +1,7 @@
 name: flutter_icons_generator
 description: Converts all *.svg icons to icon-font (.otf) and generates flutter compatible dart class without additional requirements.
 version: 0.0.1
+homepage: https://github.com/darialvznd/flutter_icons_generator
 
 environment:
   sdk: ">=2.18.4 <3.0.0"
