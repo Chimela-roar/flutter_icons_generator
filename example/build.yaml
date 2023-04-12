@@ -1,0 +1,6 @@
+targets:
+  $default:
+    builders:
+      flutter_icons_generator|iconBuilder:
+        options:
+          icons_config: "./icons_builder.yaml"

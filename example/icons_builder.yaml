@@ -1,0 +1,7 @@
+icons:
+  [
+    { className: FirstIcons, sourceFolderPath: ./assets/icons/pack1 },
+    { className: SecondIcons, sourceFolderPath: ./assets/icons/pack2 },
+  ]
+outputFontPath: ./assets/icon_fonts
+outputFilePath: lib/theme
