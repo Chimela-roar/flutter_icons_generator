@@ -65,4 +65,5 @@ targets:
 
 After running ```flutter pub run build_runner build``` you will have files "action_icons.otf", "navigation_icons.otf" in folder ./assets/icon_fonts and "action_icons.dart" and "navigation_icons.dart" in folder lib/theme. 
 
+Full usage example you may find in [example](https://github.com/darialvznd/flutter_icons_generator/tree/main/example) folder
 
