@@ -11,11 +11,11 @@ dependencies:
   flutter:
     sdk: flutter
   build: ^2.3.1
-  fontify: ^0.3.0-nullsafety.1
+  fontify_plus: ^0.4.3
   path: ^1.8.2
   recase: ^4.1.0
   yaml: ^3.1.1
-  flutter_svg: ^0.23.0+1
+  flutter_svg: ^2.1.0
 
 dev_dependencies:
   flutter_test:
