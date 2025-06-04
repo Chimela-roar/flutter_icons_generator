@@ -1,4 +1,4 @@
-import 'package:fontify/fontify.dart';
+import 'package:fontify_plus/fontify_plus.dart';
 import 'package:path/path.dart' as p;
 import 'package:recase/recase.dart';
 

@@ -3,7 +3,7 @@ import 'dart:developer' as developer;
 import 'dart:io';
 
 import 'package:build/build.dart';
-import 'package:fontify/fontify.dart';
+import 'package:fontify_plus/fontify_plus.dart';
 
 import 'font_class_gen.dart';
 import 'models/icons_model.dart';
